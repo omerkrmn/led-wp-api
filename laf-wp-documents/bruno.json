@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "laf-wp-documents",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

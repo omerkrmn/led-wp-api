@@ -1,0 +1,38 @@
+meta {
+  name: create-template
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BaseUrl}}/message/send-message-template?type=1
+  body: json
+  auth: inherit
+}
+
+params:query {
+  type: 1
+}
+
+body:json {
+  {
+    "name": "islem_tamamlandi_bilgisi",
+    "language": "tr",
+    "category": "UTILITY",
+    "components": [
+      {
+        "type": "HEADER",
+        "format": "TEXT",
+        "text": "Bilgilendirme"
+      },
+      {
+        "type": "BODY",
+        "text": "Merhaba {{1}},\n\n{{2}} numaralı işleminiz başarıyla tamamlanmıştır.\nİşlem tarihi: {{3}}\n\nBu mesaj bilgilendirme amacıyla gönderilmiştir."
+      },
+      {
+        "type": "FOOTER",
+        "text": "LED Yazılım"
+      }
+    ]
+  }
+}
